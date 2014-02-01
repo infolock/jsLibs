@@ -1,4 +1,6 @@
-## JHSortLib.js
+This repo is to house some simple JS resources that can help with understanding the language, OOP and whatever else.
+
+### JHSortLib.js
 A semi-large collection of sorting algorithms written in Javascript.
 
 
