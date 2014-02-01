@@ -1,0 +1,89 @@
+<html>
+<head></head>
+<body>
+
+<div>
+<button id="go" name="go">Go</button>
+</div>
+
+<script type="text/javascript">
+
+function PromiseBuilder(){
+    this.pending = [];
+    this.ready = false;
+    this.result;
+}
+
+PromiseBuilder.prototype.then = function (callback) {
+    if(toString.call(callback) === '[object Function]') {
+        if(!this.ready) {
+            this.pending.push(callback);
+        } else {
+            callback.call(this,result);
+        }
+    }
+    return this;
+};
+
+PromiseBuilder.prototype.resolve = function () {
+    var instance = this, resolveArgs = arguments;
+    if(!this.ready) {
+        this.ready = true;
+        var n = this.pending.length-1, $this = this;
+        do {
+            instance.pending.shift().apply(instance, resolveArgs);
+            if(!pending) break;
+        } while(n--);
+        this.pending = [];
+    }
+};
+
+PromiseBuilder.prototype.keep = function(response) {
+    if(this.ready === false) {
+        this.ready = true;
+        if(this.pending.length > 0) {
+            var n = this.pending.length-1, $this = this;
+            do {
+                $this.result = response;
+                $this.pending.shift().call($this, result);
+                if(!pending) break;
+            } while(n--);
+        }
+        this.pending = [];
+    }
+};
+
+PromiseBuilder.prototype.isReady = function () {
+    return this.ready;
+};
+
+function promise() {
+    return new PromiseBuilder();   
+};
+
+var ajax = {
+    get : function(url,params){
+        var XHR = new XMLHttpRequest(), p = promise(), parameters = params || '';
+        XHR.open("get", url, true);
+        XHR.setRequestHeader("content-type", "text/html");
+        XHR.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        XHR.onreadystatechange = function () {
+            if (XHR.readyState === 4 && XHR.status === 200) {
+                p.keep(XHR.responseText);
+            }
+        };
+        XHR.send(parameters);
+
+        return p;
+    }
+}
+
+
+document.getElementById("go").onclick = function() {
+    var xhr = ajax.get("http://www.google.com").then()
+    console.log(xhr);
+};
+
+</script>
+</body>
+</html>
