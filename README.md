@@ -12,6 +12,8 @@ jQuery - http://www.jquery.com
 #### Sort Algorithms include:
 ##### heapSort
 ```js
+// _siftDown( heap, i, max )
+// _sort( arr ) {
 JHSortLib.heapSort.applyTo( ['ze8','a',3,'blah'] );
 ```
 ##### selectionSort
@@ -20,6 +22,8 @@ JHSortLib.selectionSort( ['ze8','a',3,'blah'] );
 ```
 ##### mergeSort
 ```js
+// _merge( left, right, arr ) {
+// _sort:( arr, tmp, l ){
 JHSortLib.mergeSort.applyTo( ['ze8','a',3,'blah'] );
 ```
 ##### insertionSort
@@ -36,14 +40,25 @@ JHSortLib.pancakeSort( ['ze8','a',3,'blah'] );
 ```
 ##### quickSort
 ```js
+// _swap( i, j )
+// _divide( v, start, end )
+// _partition( start, end )
+// _sort( start, end ) 
 JHSortLib.quickSort.applyTo( ['ze8','a',3,'blah'] );
 ```
 ##### quickSort_v2
 ```js
+// _swap( i, j )
+// _divide( v, start, end )
+// _partition( start, end )
+// _sort( start, end ) 
 JHSortLib.quickSort_v2.applyTo( ['ze8','a',3,'blah'] );
 ```
 ##### quickSort_v3
 ```js
+// _swap( array, indexA, indexB )
+// _partition( array, pivot, left, right )
+// _sort( array, left, right )
 JHSortLib.heapquickSort_v3Sort.applyTo( ['ze8','a',3,'blah'] );
 ```
 ##### quickSort_v4
