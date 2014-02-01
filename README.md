@@ -1,5 +1,7 @@
 This repo is to house some simple JS resources that can help with understanding the language, OOP and whatever else.
 
+I'll list everything out here one day... there is also a lot of redundant code/backups and blah blah blah that i've kept.  one day, this house'll be clean.
+
 
 JHSortLib.js
 ----------------
