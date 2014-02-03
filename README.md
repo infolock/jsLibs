@@ -123,8 +123,8 @@ A semi-large collection of examples showing a few sorting algorithms written in 
 * Quick Sort ( 4 different versions )
 
 #### Requirements
-underscorejs - http://underscorejs.org
-jQuery - http://www.jquery.com
+* underscorejs - http://underscorejs.org
+* jQuery - http://www.jquery.com
 
 
 Node.js
