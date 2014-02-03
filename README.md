@@ -54,17 +54,61 @@ Just some code I was working on for building my own xhrRequest handler (similar 
 
 Toolkits
 ----------------
+#### Arrays_Helper.js
+Started to build an array helper but then just gave up on it for underscorejs.
+
+#### Custom Exceptions.js
+Example of building a custom exception
 
 
+#### bits_bitwise_and_bitwise.js
+Example of using/defining Bitwise Options (Flags & Masks).  This is similar to NS_ENUM/NS_OPTIONS in Objective C (enums to everyone else).
+
+#### fibonacci
+Disecting Douglas Crockford's explanation of memoize by use of fibonacci
+
+#### hash_key_generators.js
+Playing around with building a hash key generator (to be used with hash maps as key lookups).
+
+#### ints_and_bools.js
+Example of forced typecasting to an integer to test for equality.  Also includes an example showing how to force typecast to a BOOL.
+
+#### objectClone.js
+Trying to build a pure-js Object Cloner (didn't want to use jQuery's clone() - but ended up not needing it anyways so this was stopped mid-build)
+
+#### onDomReady.js
+John Resig's implementation of "...an onDomReady-function, for situations when frameworks are no-no.  It's loosely based on jQuery's implementation of $.ready"
+
+#### processParagraph.js
+... just ignore and never run this script.  heh.  was reading up about processing a paragraph of text that did all kinds of different find/replace on text, strings, markdown, etc...  It (appears) to be broken and in a state where it will create an infinite cycle loop ..  don't run it unless curiosity gets the best of you and you just want to hose your browser/machine.
 
 Trees
 ----------------
+#### BINARY_TREE_SEARCH.js
+Example of a binary tree search.
 
+#### Preorder_Binary_Tree_Traversal.js
+All kinds of stuff in here:
+* Sorting an unordered list
+* Pre-ordering a Binary Tree
+* Tree Builder
+* Node Builder
+* Search
+* etc.
+
+#### Preorder_Traversal.js
+More simplistic example of the above Preorder_Binary_Tree_Traversal.js...
+
+#### heapTree.js
+Working with a heap to understand how it works ( stopped during build out.  This is where objectClone.js came from in the Toolkits section above).
+
+#### prototype_binarySearch.js
+Not sure that this is an actual working example.  However, it is a product of my research into understanding binary trees and searching them.
 
 
 Deferred.js
 ----------------
-
+https://github.com/lifeinafolder/Promises/blob/master/src/Promises.js
 
 
 JHSortLib.js
@@ -83,9 +127,9 @@ underscorejs - http://underscorejs.org
 jQuery - http://www.jquery.com
 
 
-
 Node.js
 ----------------
+Working with nodes and searching through a x-dimensional with single/multiple roots/branches.  Not really sure this is working.  Grabbed some underscore code for convenience to help in the process and investigation.
 
 
 # Resources/Links/etc.
@@ -100,3 +144,4 @@ Node.js
 * http://bigocheatsheet.com/
 * http://www.2ality.com/2012/11/var-statement-rules.html
 * http://coding.smashingmagazine.com/2012/11/05/writing-fast-memory-efficient-javascript/
+* google.com - Search for Binary Tree, Linked List, Graph Heap, Heap Sort, Algorithms, etc.
